@@ -6,7 +6,7 @@ Build/
 Builds/
 Library/
 Logs/
-DrumXR.apk
+*.apk
 
 # CMake and Ninja build artifacts
 CMakeFiles/
@@ -24,7 +24,7 @@ compile_commands.json
 *.json
 
 # Burst temporary files
-DrumXR_BurstDebugInformation_DoNotShip/
+ElectronicLabXR_BurstDebugInformation_DoNotShip/
 
 # Crash reports
 mono_crash.*
