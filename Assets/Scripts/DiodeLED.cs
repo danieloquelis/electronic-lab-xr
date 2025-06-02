@@ -8,16 +8,17 @@ public class DiodeLED : MonoBehaviour, ISimulatableComponent
     [SerializeField] private Light lightVisual;
     [SerializeField] private Color color;
     
-    [SerializeField] private ConnectionPoint pinA;
-    [SerializeField] private ConnectionPoint pinB;
+    [SerializeField] private ConnectionPoint vcc;
+    [SerializeField] private ConnectionPoint gnd;
 
-    public Guid PinA => pinA.GetConnectionId();
-    public Guid PinB => pinB.GetConnectionId();
+    public Guid PinA => vcc.GetConnectionId();
+    public Guid PinB => gnd.GetConnectionId();
     public float Resistance => 10f;
     public float VoltageDrop => 2.0f;
     
     public bool IsCurrentAllowed(float voltageA, float voltageB)
     {
+        Debug.Log($"IsCurrentAllowed {voltageA}, {voltageB}");
         return (voltageA - voltageB) >= VoltageDrop; 
     }
 

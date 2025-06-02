@@ -6,39 +6,50 @@ using UnityEngine;
 public class CircuitManager : MonoBehaviour
 {
     private readonly Dictionary<Guid, List<Guid>> _edges = new();
-
-    public void RegisterConnection(Guid node, Guid newPoint)
+    private readonly Dictionary<Guid, ConnectionPoint> _connections = new();
+    
+    public void RegisterConnection(ConnectionPoint node, ConnectionPoint newPoint)
     {
-        if (!_edges.ContainsKey(node))
-            _edges[node] = new List<Guid>();
+        Debug.Log($"Registering connection: {node.gameObject.name} [{node.GetConnectionId()}] <--> {newPoint.gameObject.name} [{newPoint.GetConnectionId()}]");
 
-        if (!_edges[node].Contains(newPoint))
-            _edges[node].Add(newPoint);
+        var nodeConnId = node.GetConnectionId();
+        var newPointConnId = newPoint.GetConnectionId();
+        
+        if (!_edges.ContainsKey(nodeConnId))
+            _edges[nodeConnId] = new List<Guid>();
 
-        if (!_edges.ContainsKey(newPoint))
-            _edges[newPoint] = new List<Guid>();
+        if (!_edges[nodeConnId].Contains(newPointConnId))
+            _edges[nodeConnId].Add(newPointConnId);
 
-        if (!_edges[newPoint].Contains(node))
-            _edges[newPoint].Add(node);
+        if (!_edges.ContainsKey(newPointConnId))
+            _edges[newPointConnId] = new List<Guid>();
 
-        Debug.Log($"Registered connection between {node} and {newPoint}");
+        if (!_edges[newPointConnId].Contains(nodeConnId))
+            _edges[newPointConnId].Add(nodeConnId);
+        
+        _connections[nodeConnId] = node;
+        _connections[newPointConnId] = newPoint;
+        
+        PrintConnectionGraph();
         Simulate();
     }
 
-    public void DeregisterConnection(Guid node, Guid point)
+    public void DeregisterConnection(ConnectionPoint node, ConnectionPoint point)
     {
-        if (_edges.TryGetValue(node, out var connections))
+        var nodeConnId = node.GetConnectionId();
+        var pointConnId = point.GetConnectionId();
+        
+        if (_edges.TryGetValue(nodeConnId, out var connections))
         {
-            connections.Remove(point);
-            Debug.Log($"Deregistered {point} from {node}");
+            connections.Remove(pointConnId);
         }
 
-        if (_edges.TryGetValue(point, out var reverseConnections))
+        if (_edges.TryGetValue(pointConnId, out var reverseConnections))
         {
-            reverseConnections.Remove(node);
-            Debug.Log($"Deregistered {node} from {point}");
+            reverseConnections.Remove(nodeConnId);
         }
-
+        
+        PrintConnectionGraph();
         Simulate();
     }
 
@@ -49,7 +60,7 @@ public class CircuitManager : MonoBehaviour
     
     private void SimulateCircuit()
     {
-        Debug.Log("Simulating circuit...");
+        //Debug.Log("Simulating circuit...");
 
         // STEP 1: Find all components
         var allComponents = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None)
@@ -105,7 +116,8 @@ public class CircuitManager : MonoBehaviour
         {
             var a = component.PinA;
             var b = component.PinB;
-
+            
+            Debug.Log($"LED Simulate | A={_connections.GetValueOrDefault(a)?.gameObject.name} ({a}), B={_connections.GetValueOrDefault(b)?.gameObject.name} ({b}) | Reachable: A={reachable.Contains(a)}, B={reachable.Contains(b)}");
             // Only simulate if both pins are part of reachable graph
             if (!reachable.Contains(a) || !reachable.Contains(b))
             {
@@ -115,7 +127,7 @@ public class CircuitManager : MonoBehaviour
 
             var vA = voltageMap[a];
             var vB = voltageMap[b];
-
+            
             if (component.IsCurrentAllowed(vA, vB))
             {
                 var voltageDrop = vA - vB - component.VoltageDrop;
@@ -127,5 +139,17 @@ public class CircuitManager : MonoBehaviour
                 component.Simulate(0f); // Blocked current (e.g., diode reversed)
             }
         }
+    }
+    
+    private void PrintConnectionGraph()
+    {
+        Debug.Log("=== Connection Graph ===");
+        foreach (var (key, toList) in _edges)
+        {
+            var from = _connections[key];
+            var connections = string.Join(", ", toList.Select(g => _connections[g].gameObject.name));
+            Debug.Log($"[{from.gameObject.name}] → {connections}");
+        }
+        Debug.Log("=========================");
     }
 }

@@ -6,15 +6,26 @@ using UnityEngine.Events;
 public class ConnectionPoint : MonoBehaviour
 {
     [SerializeField] private bool isNode;
-    public UnityEvent<Guid, Guid> onConnect;
-    public UnityEvent<Guid, Guid> onDisconnect;
-
+    [SerializeField, HideInInspector]
+    private string connectionIdStr;
+    
+    public UnityEvent<ConnectionPoint, ConnectionPoint> onConnect;
+    public UnityEvent<ConnectionPoint, ConnectionPoint> onDisconnect;
+    
     private Guid connectionId;
     public Guid GetConnectionId() => connectionId;
 
     private void Awake()
     {
-        connectionId = Guid.NewGuid();
+        if (string.IsNullOrEmpty(connectionIdStr))
+        {
+            connectionId = Guid.NewGuid();
+            connectionIdStr = connectionId.ToString();
+        }
+        else
+        {
+            connectionId = Guid.Parse(connectionIdStr);
+        }
         
         if (isNode)
         {
@@ -44,7 +55,7 @@ public class ConnectionPoint : MonoBehaviour
             Debug.LogWarning($"{point.connectionId} is a node point. It can create a raise condition");
         }
         
-        onConnect.Invoke(connectionId, point.connectionId);
+        onConnect.Invoke(this, point);
     }
     
     private void OnTriggerExit(Collider other)
@@ -53,6 +64,6 @@ public class ConnectionPoint : MonoBehaviour
 
         if (!other.TryGetComponent(out ConnectionPoint point)) return;
 
-        onDisconnect.Invoke(connectionId, point.connectionId);
+        onDisconnect.Invoke(this, point);
     }
 }
