@@ -1271,6 +1271,9 @@ GameObject:
   - component: {fileID: 1679258005625074830}
   - component: {fileID: 307306711181941597}
   - component: {fileID: 7247898258133749420}
+  - component: {fileID: 4186056815290101452}
+  - component: {fileID: 8814486527050501734}
+  - component: {fileID: 5925091639597515678}
   m_Layer: 0
   m_Name: Protoboard
   m_TagString: Untagged
@@ -1371,8 +1374,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0008329992, y: 0.0005529993, z: 0.000101069745}
-  m_Center: {x: 0.000035940117, y: 0.000006406002, z: -0.000101375255}
+  m_Size: {x: 0.0009874039, y: 0.00058228354, z: 0.00017827218}
+  m_Center: {x: 0.00005191296, y: 0.00000773672, z: -0.0001346525}
 --- !u!54 &1679258005625074830
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1395,8 +1398,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1419,7 +1422,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1679258005625074830}
   _kinematicWhileSelected: 1
   _throwWhenUnselected: 0
 --- !u!114 &7247898258133749420
@@ -1442,6 +1445,73 @@ MonoBehaviour:
   _boundsCollider: {fileID: 8770880506788226343}
   _colliders:
   - {fileID: 8770880506788226343}
+--- !u!114 &4186056815290101452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527689231331215232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 0}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8814486527050501734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527689231331215232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebae8c63d0c3d44d8adb1fc45b96a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableUnityEventWrapper: {fileID: 4186056815290101452}
+  placementDistance: 0.4
+  hoverDistance: 0.1
+  lineIndicatorPrefab: {fileID: 7369888804044826847, guid: f24cb227543624d75a7b7e9680447261, type: 3}
+  showLineIndicator: 1
+--- !u!114 &5925091639597515678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527689231331215232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ae7336c5823ac4cb3b4e7744416a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundingShadowPrefab: {fileID: 811510001724993111, guid: 03cb3ac72ecd64394b0fc9c1adec6e5c, type: 3}
 --- !u!1 &2924755644708925604
 GameObject:
   m_ObjectHideFlags: 0

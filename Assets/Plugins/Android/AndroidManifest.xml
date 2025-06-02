@@ -22,5 +22,8 @@
   <uses-feature android:name="com.oculus.feature.PASSTHROUGH" android:required="true" />
   <uses-feature android:name="com.oculus.feature.BOUNDARYLESS_APP" android:required="true" />
   <uses-feature android:name="com.oculus.experimental.enabled" android:required="true" />
-  <uses-permission android:name="com.oculus.permission.PLANE_TRACKING" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.oculus.permission.BOUNDARY_VISIBILITY" />
+  <uses-permission android:name="com.oculus.permission.IMPORT_EXPORT_IOT_MAP_DATA" />
+  <uses-permission android:name="com.oculus.permission.USE_COLOCATION_DISCOVERY_API" />
 </manifest>

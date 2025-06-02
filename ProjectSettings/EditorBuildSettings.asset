@@ -8,8 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Samples/MRMotifs/MRMotifsHome.unity
+    guid: cbae9f7d29ae56649b9b96f04193ad89
+  - enabled: 0
+    path: Assets/Samples/MRMotifs/InstantContentPlacement/Scenes/InstantContentPlacement.unity
+    guid: 94e5d96fe23133a4c88c19940426946a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 17fdbbf32742d466b96b89d02962067a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c7f88cfc22b634120959f8f843e86ea9, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5df0b12e89cc84e8d91caacdd037898b, type: 2}
   m_UseUCBPForAssetBundles: 0
