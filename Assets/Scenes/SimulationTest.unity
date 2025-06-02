@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: decc5539737284072b1c479546d1b003, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -177,9 +177,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.01
+  far clip plane: 10
+  field of view: 18
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -205,13 +205,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289571279}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.23956574, y: -0, z: -0, w: 0.97088015}
+  m_LocalPosition: {x: 0.45, y: 0.241, z: 0.563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.722, y: 0, z: 0}
 --- !u!114 &289571283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,14 +264,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 110232724035815648, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_Range
-      value: 0.0051436727
-      objectReference: {fileID: 0}
-    - target: {fileID: 110232724035815648, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_Intensity
-      value: 1.6
-      objectReference: {fileID: 0}
     - target: {fileID: 319938061169211512, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.43292
@@ -312,85 +304,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2962113255008280874, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: gnd
-      value: 
-      objectReference: {fileID: 551657860}
-    - target: {fileID: 2962113255008280874, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: vcc
-      value: 
-      objectReference: {fileID: 2059594210}
-    - target: {fileID: 4948240973565556715, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054041216139539637, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_Name
-      value: '[LED] Vcc Pin'
-      objectReference: {fileID: 0}
     - target: {fileID: 5077172073624697201, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
       propertyPath: m_Name
       value: '[Diode LED] Red'
       objectReference: {fileID: 0}
-    - target: {fileID: 5077172073624697201, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892167138799403456, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0000999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448655459197912719, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      propertyPath: m_Name
-      value: '[LED] GND Pin'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4948240973565556715, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 477740728}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
---- !u!1 &477740727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4948240973565556715, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-  m_PrefabInstance: {fileID: 477740726}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &477740728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477740727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
---- !u!114 &551657860 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1587615509315197380, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-  m_PrefabInstance: {fileID: 477740726}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec51b07d93ef437383885a1dc0f87b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1944202781
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,17 +478,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2059594210 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5513868650707781579, guid: 48cb9f9589f6742fe85f216fb5181531, type: 3}
-  m_PrefabInstance: {fileID: 477740726}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec51b07d93ef437383885a1dc0f87b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2067523236
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,10 +713,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[PowerSource] Battery 9V'
       objectReference: {fileID: 0}
-    - target: {fileID: 4592938317048946161, guid: 62fe2e879fee8405e880aa2184ac3159, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -819,10 +726,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 37327212565722403, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Name
-      value: '[Protoboard Left] GND'
-      objectReference: {fileID: 0}
     - target: {fileID: 794122992935027226, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.40916467
@@ -863,37 +766,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1114949627780694613, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Name
-      value: '[Protoboard Left] Vcc'
-      objectReference: {fileID: 0}
     - target: {fileID: 2527689231331215232, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
       propertyPath: m_Name
       value: Protoboard
-      objectReference: {fileID: 0}
-    - target: {fileID: 3272368862128486901, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Name
-      value: '[Protoboard Right] Vcc'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4956822619770145035, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786189309107371849, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6341962688543239627, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7379279131145212465, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Name
-      value: '[Protoboard Right] GND'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432770173010265136, guid: 2d52a400ee815442c998ec7bfeeb6ec2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

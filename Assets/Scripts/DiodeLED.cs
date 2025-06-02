@@ -18,8 +18,7 @@ public class DiodeLED : MonoBehaviour, ISimulatableComponent
     
     public bool IsCurrentAllowed(float voltageA, float voltageB)
     {
-        Debug.Log($"IsCurrentAllowed {voltageA}, {voltageB}");
-        return (voltageA - voltageB) >= VoltageDrop; 
+        return voltageA - voltageB >= VoltageDrop; 
     }
 
     public void Simulate(float current)

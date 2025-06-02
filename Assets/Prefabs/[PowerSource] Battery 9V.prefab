@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 0
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -888,6 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 0
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []

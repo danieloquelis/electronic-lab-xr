@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 918112626071865116}
   - component: {fileID: 3768646461218678279}
   m_Layer: 0
-  m_Name: GNDNode
+  m_Name: '[Protoboard Left] GND'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -306,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -327,7 +329,7 @@ GameObject:
   - component: {fileID: 8882841255995642515}
   - component: {fileID: 2180457001909463307}
   m_Layer: 0
-  m_Name: VCCNode
+  m_Name: '[Protoboard Left] Vcc'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +365,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114949627780694613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -462,6 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -618,6 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -774,6 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -930,6 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1086,6 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1242,6 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1274,7 +1282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2527689231331215232}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 0.40916467, y: 0, z: 0.98998576}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
@@ -1283,7 +1291,7 @@ Transform:
   - {fileID: 3748820027141745021}
   - {fileID: 8372589498570568823}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &1726405607175788153
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1490,6 +1498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1646,6 +1655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1802,6 +1812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1958,6 +1969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -1979,7 +1991,7 @@ GameObject:
   - component: {fileID: 8862308527938333959}
   - component: {fileID: 5311268957565753924}
   m_Layer: 0
-  m_Name: VCCNode (1)
+  m_Name: '[Protoboard Right] Vcc'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2015,7 +2027,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3272368862128486901}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2114,6 +2126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -2270,6 +2283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -2426,6 +2440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -2615,6 +2630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -2771,6 +2787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -2927,6 +2944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -3083,6 +3101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -3239,6 +3258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -3395,6 +3415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -3551,6 +3572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -3707,6 +3729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -3863,6 +3886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -4019,6 +4043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -4175,6 +4200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -4331,6 +4357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -4520,6 +4547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -4602,7 +4630,7 @@ GameObject:
   - component: {fileID: 8657780777344728965}
   - component: {fileID: 5769715362587479085}
   m_Layer: 0
-  m_Name: GNDNode (1)
+  m_Name: '[Protoboard Right] GND'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4638,7 +4666,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7379279131145212465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4737,6 +4765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -4893,6 +4922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -5049,6 +5079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -5205,6 +5236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -5361,6 +5393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -5517,6 +5550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 1
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []

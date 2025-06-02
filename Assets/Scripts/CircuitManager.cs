@@ -10,8 +10,6 @@ public class CircuitManager : MonoBehaviour
     
     public void RegisterConnection(ConnectionPoint node, ConnectionPoint newPoint)
     {
-        Debug.Log($"Registering connection: {node.gameObject.name} [{node.GetConnectionId()}] <--> {newPoint.gameObject.name} [{newPoint.GetConnectionId()}]");
-
         var nodeConnId = node.GetConnectionId();
         var newPointConnId = newPoint.GetConnectionId();
         
@@ -30,7 +28,6 @@ public class CircuitManager : MonoBehaviour
         _connections[nodeConnId] = node;
         _connections[newPointConnId] = newPoint;
         
-        PrintConnectionGraph();
         Simulate();
     }
 
@@ -49,7 +46,6 @@ public class CircuitManager : MonoBehaviour
             reverseConnections.Remove(nodeConnId);
         }
         
-        PrintConnectionGraph();
         Simulate();
     }
 
@@ -60,14 +56,10 @@ public class CircuitManager : MonoBehaviour
     
     private void SimulateCircuit()
     {
-        //Debug.Log("Simulating circuit...");
-
-        // STEP 1: Find all components
         var allComponents = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None)
             .OfType<ISimulatableComponent>()
             .ToList();
 
-        // STEP 2: Find the Power Source
         var power = allComponents.FirstOrDefault(c => c is PowerSource);
 
         if (power == null)
@@ -83,12 +75,10 @@ public class CircuitManager : MonoBehaviour
         var vcc = power.PinA;
         var gnd = power.PinB;
 
-        // STEP 3: Traverse the circuit graph to find all reachable nodes
         var reachable = new HashSet<Guid>();
         var voltageMap = new Dictionary<Guid, float>();
         var queue = new Queue<(Guid, float)>();
 
-        // Start BFS from power source's +5V and 0V terminals
         queue.Enqueue((vcc, 5f));
         queue.Enqueue((gnd, 0f));
         reachable.Add(vcc);
@@ -111,14 +101,11 @@ public class CircuitManager : MonoBehaviour
             }
         }
 
-        // STEP 4: Simulate all components
         foreach (var component in allComponents)
         {
             var a = component.PinA;
             var b = component.PinB;
             
-            Debug.Log($"LED Simulate | A={_connections.GetValueOrDefault(a)?.gameObject.name} ({a}), B={_connections.GetValueOrDefault(b)?.gameObject.name} ({b}) | Reachable: A={reachable.Contains(a)}, B={reachable.Contains(b)}");
-            // Only simulate if both pins are part of reachable graph
             if (!reachable.Contains(a) || !reachable.Contains(b))
             {
                 component.Simulate(0f);

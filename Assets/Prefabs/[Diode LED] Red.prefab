@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6892167138799403456}
   - component: {fileID: 110232724035815648}
-  - component: {fileID: 1504994186222142438}
+  - component: {fileID: 7517706477908006252}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6892167138799403456
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4948240973565556715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000214, y: -0.000088, z: -0.000038}
+  m_LocalPosition: {x: -0.000214, y: -0.0000999, z: -0.000038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,8 +44,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 0.0117482
+  m_Intensity: 1.6
+  m_Range: 0.0051436727
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -98,7 +98,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &1504994186222142438
+--- !u!114 &7517706477908006252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 8395035393105102168}
   - component: {fileID: 5513868650707781579}
   m_Layer: 0
-  m_Name: PinA
+  m_Name: '[LED] Vcc Pin'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 0
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
@@ -219,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5077172073624697201}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.43391714, y: 0.01146, z: 1.0036315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -242,8 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightVisual: {fileID: 110232724035815648}
   color: {r: 1, g: 0, b: 0, a: 1}
-  pinA: {fileID: 5513868650707781579}
-  pinB: {fileID: 1587615509315197380}
+  vcc: {fileID: 5513868650707781579}
+  gnd: {fileID: 1587615509315197380}
 --- !u!1 &6766877068948769130
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +432,7 @@ GameObject:
   - component: {fileID: 3762699164756524675}
   - component: {fileID: 1587615509315197380}
   m_Layer: 0
-  m_Name: PinB
+  m_Name: '[LED] GND Pin'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNode: 0
+  connectionIdStr: 
   onConnect:
     m_PersistentCalls:
       m_Calls: []
