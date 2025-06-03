@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/Samples/MRMotifs/MRMotifsHome.unity
-    guid: cbae9f7d29ae56649b9b96f04193ad89
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/PanelWithManipulators.unity"
+    guid: bafd0df297556dd44832193b22fca1ae
   - enabled: 0
-    path: Assets/Samples/MRMotifs/InstantContentPlacement/Scenes/InstantContentPlacement.unity
-    guid: 94e5d96fe23133a4c88c19940426946a
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/GestureExamples.unity"
+    guid: 4ee2a082a0e621b49ab01667c66f1599
+  - enabled: 0
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/PokeExamples.unity"
+    guid: ada3086bde0ab18459589e22d8d9e182
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 17fdbbf32742d466b96b89d02962067a, type: 2}
