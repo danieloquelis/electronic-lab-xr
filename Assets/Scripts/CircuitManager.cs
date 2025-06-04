@@ -56,6 +56,7 @@ public class CircuitManager : MonoBehaviour
     
     private void SimulateCircuit()
     {
+        Debug.Log($"Simulating circuit with {_edges.Count} edges");
         var allComponents = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None)
             .OfType<ISimulatableComponent>()
             .ToList();
