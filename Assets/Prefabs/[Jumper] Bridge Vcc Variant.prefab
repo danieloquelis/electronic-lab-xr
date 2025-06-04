@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 187167123769349239, guid: da2c270e715fe49ef9ab1fae8a7f39b7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4874126678125670354, guid: 6d1f07d022146414fb8bbfac51875a3c, type: 3}
     - target: {fileID: 2001202847186099164, guid: da2c270e715fe49ef9ab1fae8a7f39b7, type: 3}
       propertyPath: m_Name
       value: '[Jumper] Bridge Vcc Variant'

@@ -10,6 +10,7 @@ public class CircuitManager : MonoBehaviour
     
     public void RegisterConnection(ConnectionPoint node, ConnectionPoint newPoint)
     {
+        Debug.Log($"Registering connection {node} to {newPoint}");
         var nodeConnId = node.GetConnectionId();
         var newPointConnId = newPoint.GetConnectionId();
         

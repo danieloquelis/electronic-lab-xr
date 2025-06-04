@@ -5,8 +5,9 @@ using UnityEngine.Assertions;
 public class DiodeLED : MonoBehaviour, ISimulatableComponent
 {   
     
-    [SerializeField] private Light lightVisual;
-    [SerializeField] private Color color;
+    [SerializeField] private Material ledOnMaterial;
+    [SerializeField] private Material ledOffMaterial;
+    [SerializeField] private MeshRenderer ledMeshRenderer;
     
     [SerializeField] private ConnectionPoint vcc;
     [SerializeField] private ConnectionPoint gnd;
@@ -15,7 +16,12 @@ public class DiodeLED : MonoBehaviour, ISimulatableComponent
     public Guid PinB => gnd.GetConnectionId();
     public float Resistance => 10f;
     public float VoltageDrop => 2.0f;
-    
+
+    private void Start()
+    {
+        ledMeshRenderer.material = ledOffMaterial;
+    }
+
     public bool IsCurrentAllowed(float voltageA, float voltageB)
     {
         return voltageA - voltageB >= VoltageDrop; 
@@ -23,11 +29,6 @@ public class DiodeLED : MonoBehaviour, ISimulatableComponent
 
     public void Simulate(float current)
     {
-        lightVisual.gameObject.SetActive(current > 0.01f);
-    }
-
-    private void Awake()
-    {
-        Assert.IsNotNull(lightVisual, "Light needs to be assigned for diode LED component");
+        ledMeshRenderer.material = current > 0.01f ? ledOnMaterial : ledOffMaterial;
     }
 }
