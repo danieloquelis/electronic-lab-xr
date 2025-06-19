@@ -23,6 +23,8 @@ TagManager:
   - QDSUIToggleSwitch
   - QDSUIDestructiveButton
   - ConnectionPoint
+  - SamplesInfoPanel
+  - Follow
   layers:
   - Default
   - TransparentFX

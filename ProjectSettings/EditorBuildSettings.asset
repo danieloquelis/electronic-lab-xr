@@ -9,24 +9,25 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/PanelWithManipulators.unity"
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/77.0.0/Example Scenes/PanelWithManipulators.unity"
     guid: bafd0df297556dd44832193b22fca1ae
   - enabled: 0
-    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/GestureExamples.unity"
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/77.0.0/Example Scenes/GestureExamples.unity"
     guid: 4ee2a082a0e621b49ab01667c66f1599
   - enabled: 0
-    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/PokeExamples.unity"
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/77.0.0/Example Scenes/PokeExamples.unity"
     guid: ada3086bde0ab18459589e22d8d9e182
   - enabled: 0
-    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/UISetExamples.unity"
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/77.0.0/Example Scenes/UISetExamples.unity"
     guid: 07e3686372a704147b219707ee3c6f62
   - enabled: 0
-    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/SnapExamples.unity"
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/77.0.0/Example Scenes/SnapExamples.unity"
     guid: 01ca63189b69e00488487d660224a315
   - enabled: 0
-    path: "Assets/Samples/Meta XR Interaction \u200BSDK/76.0.1/Example Scenes/TransformerExamples.unity"
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/77.0.0/Example Scenes/TransformerExamples.unity"
     guid: 7475942f60c376744ba1ec487d140105
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8e0092487c398be438296441603e72c9, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 17fdbbf32742d466b96b89d02962067a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c7f88cfc22b634120959f8f843e86ea9, type: 2}
