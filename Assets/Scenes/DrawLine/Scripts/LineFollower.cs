@@ -75,7 +75,8 @@ public class LineFollower : MonoBehaviour
         );
 
         // Rotation
-        Vector3 direction = (targetPosition - robotRb.position).normalized;
+        Vector3 lookAheadPoint = (currentIndex < drawnPath.positionCount - 1) ? drawnPath.GetPosition(currentIndex + 1) + offset : targetPosition;
+        Vector3 direction = (lookAheadPoint - robotRb.position).normalized;
         if (direction != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
