@@ -65,5 +65,7 @@ Assets/PassthroughCameraApiSamples.meta
 Assets/Samples/*
 
 # We ignore this just because we have different hardwares, devices and OS (macbook vs windows)
-Assets/XR/Settings/OpenXR Package Settings.asset
-Assets/XR/XRGeneralSettingsPerBuildTarget.asset
+Assets/Resources/PerformanceTestRunInfo.json.meta
+Assets/Resources/PerformanceTestRunSettings.json.meta
+Assets/TextMesh Pro/Sprites/EmojiOne.json.meta
+Assets/XR/*
