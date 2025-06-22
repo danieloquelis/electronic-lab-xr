@@ -63,3 +63,7 @@ TempAssembly.dll
 Assets/PassthroughCameraApiSamples/*
 Assets/PassthroughCameraApiSamples.meta
 Assets/Samples/*
+
+# We ignore this just because we have different hardwares, devices and OS (macbook vs windows)
+Assets/XR/Settings/OpenXR Package Settings.asset
+Assets/XR/XRGeneralSettingsPerBuildTarget.asset
