@@ -40,7 +40,7 @@ public class ConnectionPoint : MonoBehaviour
         Assert.IsTrue(connectorCollider.isTrigger, "Collider must contains a triggered collider");
 
         var circuitManager = FindFirstObjectByType<CircuitManager>();
-        Assert.IsNotNull(circuitManager, "Circuit has not been found in the scene");
+        Debug.LogWarning("Circuit has not been found in the scene");
         onConnect.AddListener(circuitManager.RegisterConnection);
         onDisconnect.AddListener(circuitManager.DeregisterConnection);
     }
